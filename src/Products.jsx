@@ -5,10 +5,10 @@ import Product from './Product'
 
 function Products({products}) {
 
-    
+
 
   return (
-    <div>
+    <div className='products'>
         {products.map((product) =>(
             <Product key={product.id} product={product}/>
         )

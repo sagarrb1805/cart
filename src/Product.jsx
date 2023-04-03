@@ -12,7 +12,7 @@ function Product({product}) {
 
     <div>
         <Row><Col md="3">
-      <Card>
+      <Card style={{width:'200px'}}>
       <Card.Img variant="top" src={product.image} width="30%" height="180px" style={{background:"#e6fffa", margin:"auto"}}/>
       <Card.Body>
         <Card.Title>{product.prodName}</Card.Title>

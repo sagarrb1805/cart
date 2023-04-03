@@ -1,5 +1,5 @@
 {
-  "products":[
+  "products": [
     {
       "id": 1,
       "prodName": "Product 1",
@@ -17,6 +17,13 @@
       "prodName": "Product 3",
       "price": 100,
       "pdesc": "product 1 description"
+    },
+    {
+      "prodName": "sample",
+      "price": "100",
+      "pdesc": "sample",
+      "image": "C:\\fakepath\\prod1.jpeg",
+      "id": 4
     }
   ]
 }

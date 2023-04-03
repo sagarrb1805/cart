@@ -41,3 +41,6 @@
 .custom-nav{
   height: 100px;
 }
+.products{
+  display: flex;
+}

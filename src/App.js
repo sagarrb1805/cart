@@ -33,7 +33,15 @@ useEffect( ()=>{
 }, [])
 
 
-  const onProdAdd = (product)=>{
+  const onProdAdd = async (product) =>{
+
+    const res = await fetch("http://localhost:6001/products", {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(product)
+    })
 
     setProducts([...products, product])
   }

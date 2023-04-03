@@ -15,7 +15,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 
-function Navbarcustom() {
+function Navbarcustom({onAdd}) {
   return (
     <div>
 
@@ -31,7 +31,7 @@ function Navbarcustom() {
           >
             <Nav.Link href="#action1">Home</Nav.Link>
             <Nav.Link href="#action2">Cart</Nav.Link>
-            <Nav.Link href="#action3">Add Product</Nav.Link>
+            <Nav.Link href="#action3" onClick={onAdd}>Add Product</Nav.Link>
             
           </Nav>
           <Form className="d-flex">

@@ -1,5 +1,6 @@
 import React from 'react'
-
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import {Container} from 'react-bootstrap';
 
@@ -8,10 +9,11 @@ import Card from 'react-bootstrap/Card';
 
 function Product({product}) {
   return (
-    <Container>
+
     <div>
-      <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={product.image} width="180px" height="180px" style={{background:"#e6fffa"}}/>
+        <Row><Col md="4">
+      <Card>
+      <Card.Img variant="top" src={product.image} width="30%" height="180px" style={{background:"#e6fffa", margin:"auto"}}/>
       <Card.Body>
         <Card.Title>{product.prodName}</Card.Title>
         <Card.Text>
@@ -23,8 +25,10 @@ function Product({product}) {
         <Button variant="success">Add to Cart</Button>
       </Card.Body>
     </Card>
+    </Col></Row>
+
     </div>
-    </Container>
+
   )
 }
 

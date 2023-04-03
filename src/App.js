@@ -16,7 +16,7 @@ import prod3 from './images/prod3.jpeg'
 
 function App() {
 
-  
+const [addProduct, setAddProduct] = useState(false)
 const [products, setProducts] = useState([
   {
     id:1,
@@ -40,16 +40,23 @@ const [products, setProducts] = useState([
     image:prod3
   }
 ])
+  const onProdAdd = (product)=>{
 
+    setProducts([...products, product])
+  }
+  const onAdd = ()=>{
+    setAddProduct(!addProduct)
+  }
 
   return (
     <div className="App" style={{background:"#e6ffee"}}>
 
       <div className='custom-nav'>
-        <Navbarcustom/>
+        <Navbarcustom onAdd={onAdd}/>
         </div>
         <div>
-      <AddProduct></AddProduct>
+          {addProduct && <AddProduct onProdAdd={onProdAdd}></AddProduct>}
+      
       </div>
 
         <div className='cont'>

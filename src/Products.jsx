@@ -5,7 +5,7 @@ import Product from './Product'
 
 function Products({products}) {
   return (
-    <div style={{display:"flex"}}>
+    <div>
         {products.map((product) =>(
             <Product key={product.id} product={product}/>
         )

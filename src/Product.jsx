@@ -7,12 +7,12 @@ import {Container} from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function Product({product}) {
+function Product({product, addtoCart}) {
   return (
 
-    <div>
-        <Row><Col md="3">
-      <Card style={{width:'200px'}}>
+    <div className='product'>
+        <Row><Col>
+      <Card style={{width:'250px', height:'300px'}}>
       <Card.Img variant="top" src={product.image} width="30%" height="180px" style={{background:"#e6fffa", margin:"auto"}}/>
       <Card.Body>
         <Card.Title>{product.prodName}</Card.Title>
@@ -22,7 +22,7 @@ function Product({product}) {
         <Card.Text>
           {product.price}
         </Card.Text>
-        <Button variant="success">Add to Cart</Button>
+        <Button variant="success" onClick={()=>(addtoCart(product.id))}>Add to Cart</Button>
       </Card.Body>
     </Card>
     </Col></Row>

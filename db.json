@@ -1,4 +1,20 @@
 {
+  "cartedProducts": [
+    {
+      "id": 1,
+      "prodName": "Product 1",
+      "price": 300,
+      "pdesc": "product 1 description",
+      "count": 4
+    },
+    {
+      "id": 2,
+      "prodName": "Product 2",
+      "price": 200,
+      "pdesc": "product 2 description",
+      "count": 1
+    }
+  ],
   "products": [
     {
       "id": 1,
@@ -24,6 +40,27 @@
       "pdesc": "sample",
       "image": "C:\\fakepath\\prod1.jpeg",
       "id": 4
+    },
+    {
+      "prodName": "",
+      "price": 0,
+      "pdesc": "",
+      "image": "",
+      "id": 5
+    },
+    {
+      "prodName": "",
+      "price": "",
+      "pdesc": "",
+      "image": "",
+      "id": 6
+    },
+    {
+      "prodName": "hello ",
+      "price": "12",
+      "pdesc": "",
+      "image": "",
+      "id": 7
     }
   ]
 }

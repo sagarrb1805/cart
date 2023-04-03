@@ -43,4 +43,10 @@
 }
 .products{
   display: flex;
+  flex-flow: wrap;
+  margin: auto
+}
+.product{
+  margin: auto;
+  margin-bottom: 80px;
 }

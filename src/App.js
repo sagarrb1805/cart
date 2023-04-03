@@ -58,14 +58,19 @@ useEffect( ()=>{
     const res = await fetch( `http://localhost:6001/products/${id}`)
     console.log(res)
     const data = await res.json()
-
-    const resCart = await fetch(`http://localhost:6001/cartedProducts/${id}`)
+    let dataCart;
+    try {
+      const resCart = await fetch(`http://localhost:6001/cartedProducts/${id}`)
+      dataCart = await resCart.json()
+    } catch (error) {
+      dataCart = {}
+    }
     
-    const dataCart = await resCart.json()
+    
     console.log(dataCart)
     if(Object.keys(dataCart).length !== 0){
       // console.log(dataCart.count)
-      dataCart.count = dataCart.count + 1
+      dataCart.count += 1
       // console.log(dataCart.count)
 
       const resput = await fetch(`http://localhost:6001/cartedProducts/${id}`, {

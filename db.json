@@ -5,14 +5,38 @@
       "prodName": "Product 1",
       "price": 300,
       "pdesc": "product 1 description",
-      "count": 4
+      "count": 8
     },
     {
       "id": 2,
       "prodName": "Product 2",
       "price": 200,
       "pdesc": "product 2 description",
+      "count": 2
+    },
+    {
+      "prodName": "sample",
+      "price": "100",
+      "pdesc": "sample",
+      "image": "C:\\fakepath\\prod1.jpeg",
+      "id": 4,
       "count": 1
+    },
+    {
+      "prodName": "hello ",
+      "price": "12",
+      "pdesc": "",
+      "image": "",
+      "id": 7,
+      "count": 1
+    },
+    {
+      "prodName": "",
+      "price": "",
+      "pdesc": "",
+      "image": "",
+      "id": 6,
+      "count": 2
     }
   ],
   "products": [

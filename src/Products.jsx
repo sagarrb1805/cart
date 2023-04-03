@@ -4,6 +4,9 @@ import React from 'react'
 import Product from './Product'
 
 function Products({products}) {
+
+    
+
   return (
     <div>
         {products.map((product) =>(

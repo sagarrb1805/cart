@@ -11,7 +11,7 @@ function Product({product}) {
   return (
 
     <div>
-        <Row><Col md="4">
+        <Row><Col md="3">
       <Card>
       <Card.Img variant="top" src={product.image} width="30%" height="180px" style={{background:"#e6fffa", margin:"auto"}}/>
       <Card.Body>

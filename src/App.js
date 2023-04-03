@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Navbarcustom from './Navbarcustom'
 import Products from './Products';
@@ -17,29 +17,22 @@ import prod3 from './images/prod3.jpeg'
 function App() {
 
 const [addProduct, setAddProduct] = useState(false)
-const [products, setProducts] = useState([
-  {
-    id:1,
-    prodName:"Product 1",
-    price:300,
-    pdesc:"product 1 description",
-    image:prod1
-  },
-  {
-    id:2,
-    prodName:"Product 2",
-    price:200,
-    pdesc:"product 2 description",
-    image:prod2
-  },
-  {
-    id:3,
-    prodName:"Product 3",
-    price:100,
-    pdesc:"product 1 description",
-    image:prod3
+const [products, setProducts] = useState([])
+
+useEffect( ()=>{
+  const getProducts = async()=>{
+    const res = await fetch("http://localhost:6001/products")
+    console.log(res)
+    const data = await res.json()
+    // console.log(data)
+    setProducts(data)
+    
   }
-])
+  getProducts()
+
+}, [])
+
+
   const onProdAdd = (product)=>{
 
     setProducts([...products, product])
